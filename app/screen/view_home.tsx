@@ -1,8 +1,10 @@
 import MainLayout from '@/components/mainlayout';
+import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
 
 
 
@@ -16,6 +18,7 @@ const View_home = () => {
                 </View>
 
                 <View style={styles.maincard}>
+                    {/*Meeting td*/}
                     <View style={styles.tdcard}>
                         <View style={styles.tdtxtrow}>
                             <View style={styles.tdinconrd}>
@@ -24,13 +27,45 @@ const View_home = () => {
                             </View>
                             <View>
                                 <Text style={styles.tdtxt} >Important Meeting</Text>
-                                <Text style={styles.tdtxt}>July 29, 2025 9:00AM</Text>
+                                <Text style={styles.tdtxt}>July 29, 2025 9:00 AM</Text>
                             </View>
                         </View>
                         <MaterialIcons name="check-box-outline-blank" size={24} color="#4b3780" />
 
                     </View>
+
+                    {/*Dinner td*/}
+                    <View style={styles.tdcard}>
+                        <View style={styles.tdtxtrow}>
+                            <View style={styles.tdinconrdsec}>
+                                <Entypo name="calendar" size={24} color="#4b3780" />
+                            </View>
+                            <View>
+                                <Text style={styles.tdtxt} >Have dinner with friends</Text>
+                                <Text style={styles.tdtxt}>July 31, 2025 8:00 AM</Text>
+                            </View>
+                        </View>
+                        <MaterialIcons name="check-box-outline-blank" size={24} color="#4b3780" />
+                    </View>
+                    {/* <View style={styles.verticalDivider} /> */}
+                    {/*Daily td*/}
+                    <View style={styles.tdcard}>
+                        <View style={styles.tdtxtrow}>
+                            <View style={styles.tdinconrd}>
+                                <Ionicons name="trophy-outline" size={24} color="black" />
+                            </View>
+                            <View>
+                                <Text style={styles.tdtxt} >Daily Task</Text>
+                                <Text style={styles.tdtxt}>July 27, 2025 9:05 PM</Text>
+                            </View>
+                        </View>
+                        <MaterialIcons name="check-box-outline-blank" size={24} color="#4b3780" />
+
+                    </View>
+
                 </View>
+
+
             </View>
 
         </MainLayout>
@@ -88,16 +123,29 @@ const styles = StyleSheet.create({
         gap: 20,
     },
     tdinconrd: {
-        width: 40,
-        height: 40,
-        borderRadius: 20,
+        width: 50,
+        height: 50,
+        borderRadius: 35,
         backgroundColor: '#ffebb3',
+        justifyContent: 'center', // Center the icon vertically
+        alignItems: 'center',
+    },
+    tdinconrdsec: {
+        width: 50,
+        height: 50,
+        borderRadius: 35,
+        backgroundColor: '#e5e1f2',
         justifyContent: 'center', // Center the icon vertically
         alignItems: 'center',
     },
     tdtxt: {
         fontSize: 16,
-    }
+    },
+    // verticalDivider: {
+    //     width: 1,
+    //     backgroundColor: '#00',
+    //     marginHorizontal: 10,
+    // },
 })
 
 
