@@ -12,7 +12,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         // safeAreaProvider is used to handle the safe area insets on devices with notches or rounded corners
         // SafeAreaView is used to render content within the safe area boundaries
         <SafeAreaProvider>
-            <SafeAreaView style= {{flex: 1}}edges={['top', 'left', 'right']}>
+            <SafeAreaView style= {{flex: 1, backgroundColor:"#F7F7F7"}}edges={['top', 'left', 'right']}>
                 <StatusBar style="dark" />
                 {children}
             </SafeAreaView>
