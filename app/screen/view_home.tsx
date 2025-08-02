@@ -1,14 +1,21 @@
+import MainLayout from '@/components/mainlayout'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 const View_home = () => {
     return (
-       
-        <View style={styles.maincontiner}>
-            <Text style={styles.datetxt}>July 27, 2025</Text>
-            <Text style={styles.mainheader}>My Todo List</Text>
-        </View>
+        <MainLayout>
+            <View style={styles.maincontiner}>
+                <Text style={styles.datetxt}>July 27, 2025</Text>
+                <Text style={styles.mainheader}>My Todo List</Text>
+            </View>
 
+            <View style={styles.card}>
+                <Text style={{ color: "#fff", fontSize: 20, textAlign: "center" }}>You have no tasks for today</Text>
+                <Text style={{ color: "#fff", fontSize: 20, textAlign: "center" }}>Add a task to get started</Text>
+            </View>
+
+        </MainLayout>
 
     )
 }
@@ -35,6 +42,16 @@ const styles = StyleSheet.create({
         textAlign: "center",
         paddingBottom: 30,
         fontWeight: "semibold"
+    },
+    card: {
+        backgroundColor: "gray",
+        paddingTop: 20,
+        paddingBottom: 20,
+        borderRadius: 10,
+        marginHorizontal: 20,
+        zIndex: 1,
     }
 })
+
+
 
