@@ -66,6 +66,40 @@ const View_home = () => {
                     <Text style={styles.completedText}>Completed</Text>
                     <Text style={styles.clearAllText}>Clear All</Text>
                 </View>
+
+                {/* White Card Container (Not absolute now) */}
+                <View style={styles.completedmaincard}>
+
+                    <View style={styles.tdcard}>
+                        <View style={styles.tdtxtrow}>
+                            <View style={styles.completedtdinconrd}>
+                                <Ionicons name="document-text-outline" size={24} color="#538096" />
+                            </View>
+                            <View>
+                                <Text style={styles.strikethroughText}>Meetup with Client</Text>
+                                <Text style={styles.strikethroughText}>August 01, 2025 3:30PM </Text>
+                            </View>
+                        </View>
+                        <Ionicons name="checkbox" size={24} color="#8072a6" />
+
+                    </View>
+
+
+                    <View style={styles.tdcard}>
+                        <View style={styles.tdtxtrow}>
+                            <View style={styles.completedtdinconrd}>
+                                <Ionicons name="document-text-outline" size={24} color="#538096" />
+
+                            </View>
+                            <View>
+                                <Text style={styles.strikethroughText}>Dummy Text</Text>
+                                <Text style={styles.strikethroughText}>July 27, 2025 8:00 AM</Text>
+                            </View>
+                        </View>
+                        <Ionicons name="checkbox" size={24} color="#8072a6" />
+                    </View>
+
+                </View>
             </View>
         </MainLayout>
     );
@@ -98,7 +132,7 @@ const styles = StyleSheet.create({
     },
     maincard: {
         backgroundColor: "#fff",
-        padding: 20,
+        padding: 15,
         borderRadius: 10,
         marginHorizontal: 20,
         marginTop: -40, // overlap the purple section like a stack
@@ -132,13 +166,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     tdtxt: {
-        fontSize: 16,
+        fontSize: 15,
     },
     completedSection: {
         justifyContent: "space-between",
         flexDirection: "row",
-        marginTop: 20,
+        marginTop: 15,
         marginHorizontal: 20,
+        marginBottom: 10,
     },
     completedText: {
         fontSize: 16,
@@ -149,4 +184,24 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         color: 'red',
     },
+    completedmaincard: {
+        backgroundColor: "#fff",
+        padding: 15,
+        borderRadius: 10,
+        marginHorizontal: 20,
+
+    },
+    completedtdinconrd: {
+        width: 50,
+        height: 50,
+        borderRadius: 35,
+        backgroundColor: '#e6f2fa',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    strikethroughText: {
+        textDecorationLine: 'line-through',
+        fontSize: 15,
+        color: "#bababa"
+    }
 });
