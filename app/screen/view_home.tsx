@@ -3,7 +3,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const View_home = () => {
     return (
@@ -100,6 +100,10 @@ const View_home = () => {
                     </View>
 
                 </View>
+
+                <TouchableOpacity style={styles.btnstyle}>
+                    <Text style={styles.plaintxt}>Add New Task</Text>
+                </TouchableOpacity>
             </View>
         </MainLayout>
     );
@@ -189,6 +193,7 @@ const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 10,
         marginHorizontal: 20,
+        marginBottom: 10,
 
     },
     completedtdinconrd: {
@@ -203,5 +208,18 @@ const styles = StyleSheet.create({
         textDecorationLine: 'line-through',
         fontSize: 15,
         color: "#bababa"
+    },
+    btnstyle: {
+        margin: 10,
+        padding: 15,
+        borderRadius: 30,
+        backgroundColor: "#4b3780",
+        alignItems: "center",
+        justifyContent: "center"
+
+    },
+    plaintxt: {
+        color: "#fff",
+        fontWeight: 600,
     }
 });
