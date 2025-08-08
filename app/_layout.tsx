@@ -1,9 +1,9 @@
 import React from 'react'
-import View_home from './screen/view_home'
+import Navigation from './navigation/stack/navigation'
 
 const _layout = () => {
   return (
-    <View_home/>
+    <Navigation/>
   )
 }
 

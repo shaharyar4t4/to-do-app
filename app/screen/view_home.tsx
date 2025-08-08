@@ -2,10 +2,15 @@ import MainLayout from '@/components/mainlayout';
 import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { RootStackParamList } from '../navigation/stack/navigation';
 
-const View_home = () => {
+
+type PropsType = NativeStackScreenProps<RootStackParamList, "View_home">;
+
+const View_home = ({navigation}: PropsType) => {
     return (
         <MainLayout>
             <View style={styles.container}>
@@ -101,7 +106,7 @@ const View_home = () => {
 
                 </View>
 
-                <TouchableOpacity style={styles.btnstyle}>
+                <TouchableOpacity style={styles.btnstyle} onPress={()=> navigation.navigate("View_addtask")}>
                     <Text style={styles.plaintxt}>Add New Task</Text>
                 </TouchableOpacity>
             </View>
